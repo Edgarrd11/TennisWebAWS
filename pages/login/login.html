@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFM Tennis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-dark" style="background-color: rgb(14, 14, 19);">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/tennislogo.png" alt="" width="200" height="60">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <section class="vh-100">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6 text-black">
+          
+                  <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+          
+                    <form style="width: 23rem;">
+          
+                      <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Registrate</h3>
+          
+                      <div class="form-outline mb-4">
+                        <input id="email" type="email" id="form2Example18" class="form-control form-control-lg" />
+                        <label class="form-label" for="form2Example18">Nombre</label>
+                      </div>
+          
+                      <div class="form-outline mb-4">
+                        <input id="password" type="password" id="form2Example28" class="form-control form-control-lg" />
+                        <label class="form-label" for="form2Example28">Matricula</label>
+                      </div>
+          
+                      <div class="pt-1 mb-4">
+                        <button 
+                            id="submitData" 
+                            class="btn btn-info btn-lg btn-block btn-dark" 
+                            type="button" 
+                            style="background-color: #082F86 !important;"
+                        >Enviar</button>
+                      </div>
+                    </form>
+          
+                  </div>
+          
+                </div>
+                <div class="col-sm-6 px-0 d-none d-sm-block">
+                  <img src="../../img/loginphoto.png"
+                    alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                </div>
+              </div>
+            </div>
+          </section>
+    </div>
+    <!--Footer-->
+    <footer class="bg-primary text-center text-lg-start text-white" style="background-color: #296FA8 !important;">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row my-4">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+                    <div class="shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
+                        style="width: 150px; height: 150px;">
+                        <img src="../../img/fcfm.png" height="120rem" alt="FCFM Logo" loading="lazy" />
+                    </div>
+
+                    <p class="text-center">SAN NICOLAS DE LOS GARZA <br> NUEVO LEÓN <br> Horario: 4:00PM - 6:00pm</p>
+
+                    <ul class="list-unstyled d-flex flex-row justify-content-center">
+                        <li>
+                            <a class="text-white px-2" href="#!">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white px-2" href="#!">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white ps-2" href="#!">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Plataformas Informativas</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="https://www.facebook.com/NBisontes" class="text-white"><i class="fas fa-paw pe-3"></i>Noticieros Bisontes</a>
+                        </li>
+                    </ul>
+                </div>
+
+               
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgb(14, 14, 19);">
+            <p>FCFM Tennis 2024 ® <br> Sistemas operativos</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDjjRzryAsBMUP-HaM-dea77z-U_O7T32M",
+    authDomain: "vaicari-pia.firebaseapp.com",
+    projectId: "vaicari-pia",
+    storageBucket: "vaicari-pia.appspot.com",
+    messagingSenderId: "357452801766",
+    appId: "1:357452801766:web:cc93fad597bd0a584bbd27"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth();
+  const database = getDatabase(app);
+
+  submitData.addEventListener('click', (e) => {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        const user =userCredential.user
+        var lgDate = new Date();
+        update(ref(database, 'users/' + user.uid), {
+                last_login: lgDate,
+            })
+            .then(() => {
+                console.log('user logged in successfully');
+                window.location.assign('../logged/logged.html');
+            })
+            .catch((error) => {
+                alert(error);
+            });
+    }).catch((error) => {
+        if(email || password == "") {
+          alert("Introduzca email y contraseña");
+        }
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+    });
+
+  });
+</script>

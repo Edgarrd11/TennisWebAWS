@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaicari Tennis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="logged.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #46814E;">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="../../assets/logo.png" alt="" width="160" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="list 
+                navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#nosotros">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#productos">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#torneos">TORNEOS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#clases" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            CLASES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#ninos">NIÑOS</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#adultos">ADULTOS</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#clases" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            CUENTA
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a id="submitData" class="dropdown-item" href="#ninos">CERRAR SESIÓN</a></li>
+                            <li>
+
+
+                        </ul>
+
+                    </li>
+                    <!-- <li class="nav-item">
+                        <button class="btn btn-outline-warning" type="submit">RESERVAR CANCHA</button>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../img/homeC-1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h5>ENTRENA CON PROFESIONALES</h5>
+                    <p>¡Inscribete hoy mismo!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../img/homeC-2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h5>CLASES PARA ADULTOS</h5>
+                    <p>Desarrolla tu maximo potencial con nosotros</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../img/homeC-3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h5>TORNEOS</h5>
+                    <p>Participa y gana grandes premios</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Servicios 1 -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2>RENTA DE CANCHAS</h2>
+                        <p>Ofrecemos alquiler de canchas de tenis en nuestras instalaciones de última generación.
+                            <br>Nuestras canchas están disponibles al aire libre con luces, lo que las hace
+                            ideales para jugar en cualquier momento del día.
+                            <br> ¡Contáctanos hoy para reservar tu cancha de tenis!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-img">
+                        <img src="../../img/home-ab1.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-img">
+                        <img src="../../img/home-ab2.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2>TORNEOS</h2>
+                        <p>Ofreceremos premios y trofeos para los ganadores, además de una amplia gama de servicios y
+                            comodidades para todos los participantes.<br> ¡No te pierdas esta oportunidad única de
+                            competir
+                            contra los mejores y demostrar tus habilidades en la cancha! <br> ¡Regístrate hoy y únete a
+                            la
+                            acción!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2>PICKEBALL</h2>
+                        <p>¡Alquila una cancha de Pickeball en nuestras instalaciones de última generación! <br>
+                            Además, nuestras canchas están bien mantenidas y ofrecen una superficie lisa y uniforme para
+                            un juego agradable. <br> También ofrecemos paletas y pelotas de Pickeball para rentar, por
+                            lo que no
+                            tienes que preocuparte por llevar tus propios equipos. <br> ¡Contáctanos hoy para reservar
+                            tu
+                            cancha de Pickeball!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-img">
+                        <img src="../../img/home-ab3.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Servicios 2 -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>NUESTROS SERVICIOS</h2>
+                        <p> Contamos con servicio de encordado, para darle mas vida a tu raqueta.
+                            <br> Venta de raquetas de la mejor calidad
+                            <br>También contamos con servicio de activación fisica.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="../../img/raquetas.jpg" class="card-img-top" alt="Venta de raquetas">
+                            <div class="card-body">
+                                <h5 class="card-title">Venta de raquetas</h5>
+                                <p class="card-text">Contamos con las mejores marcas del mercado</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="../../img/actfis.jpg" class="card-img-top" alt="Encordado">
+                            <div class="card-body">
+                                <h5 class="card-title">Activación fisica</h5>
+                                <p class="card-text">Ven y disfruta de un ejercico satisfactorio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="../../img/encordado.jpg" class="card-img-top" alt="New York">
+                            <div class="card-body">
+                                <h5 class="card-title">Encordado</h5>
+                                <p class="card-text">Contamos con las mejores cuerdas de mercado</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Nos encontramos en -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Nos encontramos en</h2>
+                        <p>Calle 8 entre Insurgentes y Abasolo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1429.795348191644!2d-104.92232422667627!3d21.521615629147032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427378970c32783%3A0x9a2a52997c9d1e71!2sComplejo%20Vaic%C3%A1ri%20Tennis!5e0!3m2!1ses-419!2smx!4v1670699576913!5m2!1ses-419!2smx"
+                width="700" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </p>
+    </section>
+    <!--Footer-->
+    <footer class="bg-primary text-center text-lg-start text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row my-4">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+                    <div class="shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
+                        style="width: 150px; height: 150px;">
+                        <img src="../../img/logoraqueta.png" height="150rem" alt="Vaicari Logo" loading="lazy" />
+                    </div>
+
+                    <p class="text-center">TEPIC, NAYARIT, MEXICO <br> Telefono: 311-141-8943 <br> Horario: 8:00am -
+                        10pm</p>
+
+                    <ul class="list-unstyled d-flex flex-row justify-content-center">
+                        <li>
+                            <a class="text-white px-2" href="#!">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white px-2" href="#!">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white ps-2" href="#!">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">PATROCINADORES OFICIALES</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <img src="../../img/sponsor/coca.png" height="80rem" alt="" loading="lazy" />
+                            <img src="../../img/sponsor/arena.png" height="80rem" alt="" loading="lazy" />
+                            <img src="../../img/sponsor/utr.png" height="80rem" alt="" loading="lazy" />
+                        </li>
+                        <li class="mb-2">
+                            <img src="../../img/sponsor/motul.png" height="80rem" width="250rem" alt=""
+                                loading="lazy" />
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Plataformas Informativas</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="https://app.universaltennis.com/clubs/13932" class="text-white"><i
+                                    class="fas fa-paw pe-3"></i>UTR</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://www.instagram.com/vaicari.tennis/" class="text-white"><i
+                                    class="fas fa-paw pe-3"></i>Instagram</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://www.facebook.com/profile.php?id=100065271181082" class="text-white"><i
+                                    class="fas fa-paw pe-3"></i>Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Marca de ropa</h5>
+
+                    <ul class="list-unstyled">
+                        <a href="https://www.instagram.com/ropaolympus/?hl=es" class="text-white"><i
+                                class="fas fa-paw pe-3"></i>Olympus Sport</a>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #023B2A">
+            <p>Vaicari Tennis 2022 ® <br> Desarrollo Web por Edgar Ruiz</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    import { getAuth, signOut} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDjjRzryAsBMUP-HaM-dea77z-U_O7T32M",
+        authDomain: "vaicari-pia.firebaseapp.com",
+        projectId: "vaicari-pia",
+        storageBucket: "vaicari-pia.appspot.com",
+        messagingSenderId: "357452801766",
+        appId: "1:357452801766:web:cc93fad597bd0a584bbd27"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+
+    submitData.addEventListener('click', (e) => {
+        signOut(auth).then(() => {
+            window.location.assign('../../index.html');
+        }).catch((error) => {
+            console.log(error);
+        });
+    });
+</script>
