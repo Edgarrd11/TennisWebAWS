@@ -1,37 +1,63 @@
 import express from 'express'
 import mongoose from 'mongoose'
 
+// Se conecta a la base de datos
+mongoose.connect('mongodb://fer:password@mongodb:27017/miapp?authSource=admin')
 
 // Se define un modelo de mongoose
 const Tenista = mongoose.model('Tenista', new mongoose.Schema({
   nombre: String,
   matricula: String,
 }))
+
 // Se crea una instancia de express 
 const app = express()
-app.use(express.static(new URL('public', import.meta.url).pathname));
 
+// Configuracion de la aplicacion
+const viewspath = new URL('views', import.meta.url).pathname;
+app.use(express.static(new URL('public', import.meta.url).pathname));
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 app.set('view engine', 'ejs') 
-const viewspath = new URL('views', import.meta.url).pathname;
 app.set('views', viewspath)
 
-app.get("/index", (_req, res) => {
+// Endpoint papra renderizar el index
+app.get("/",async (_req, res) => {
   console.log('accediendo a index...')
   res.render('index')
 })
 
-
-app.get("/login", (_req, res) => {
+// Endpoint para renderizar el login  
+app.get("/login", async (_req, res) => {
   console.log('accediendo a login...')
   res.render('login')
 })
 
+// Endpoint para hacer registros
+app.post('/regist', async (_req, res) => {
+  console.log('registrando...')
+  console.log(_req.body)
+
+  const { nombre, matricula } = _req.body
+  await Tenista.create({ nombre, matricula })
+  console.log("Registro exitoso!")
+  return res.redirect('/')
+
+})
+
+
+// Se muestra la base de datos
+app.get('/tenistas', async (_req, res) => {
+  console.log('mostrando tenistas...')
+  const tenistas = await Tenista.find();
+  return res.send(tenistas)
+})
+
+
 
 app.listen(3000, () => console.log('Servidor corriendo en http://localhost:3000/'))
 
-// Se conecta a la base de datos
-//mongoose.connect('mongodb://fer:password@mongodb:27017/miapp?authSource=admin')
 
 
 // Se define un endopoint para listar los animales

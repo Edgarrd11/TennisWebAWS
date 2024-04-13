@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-dark" style="background-color: rgb(14, 14, 19);">
         <div class="container">
-            <a class="navbar-brand" href="index">
+            <a class="navbar-brand" href="/">
                 <img src="assets/tennislogo.png" alt="" width="200" height="60">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,25 +34,24 @@
           
                   <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
           
-                    <form style="width: 23rem;">
+                    <form action="/regist" method="post" style="width: 23rem;">
           
                       <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Registrate</h3>
           
                       <div class="form-outline mb-4">
-                        <input id="email" type="text" name="name" placeholder="Name" class="form-control form-control-lg" />
-                        <label class="form-label">Nombre</label>
+                        <input id="nombre" type="text" class="form-control form-control-lg" name="nombre" required/>
+                        <label class="form-label" for="nombre">Nombre</label>
                       </div>
-          
+
                       <div class="form-outline mb-4">
-                        <input id="text" type="text" class="form-control form-control-lg" />
-                        <label class="form-label">Matricula</label>
+                        <input id="matricula" type="text" class="form-control form-control-lg" name="matricula" required/>
+                        <label class="form-label" for="matricula">Matricula</label>
                       </div>
-          
+
                       <div class="pt-1 mb-4">
                         <button 
-                            id="submitData" 
                             class="btn btn-info btn-lg btn-block btn-dark" 
-                            type="button" 
+                            type="submit" 
                             style="background-color: #082F86 !important;"
                         >Enviar</button>
                       </div>
@@ -132,56 +131,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
-  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDjjRzryAsBMUP-HaM-dea77z-U_O7T32M",
-    authDomain: "vaicari-pia.firebaseapp.com",
-    projectId: "vaicari-pia",
-    storageBucket: "vaicari-pia.appspot.com",
-    messagingSenderId: "357452801766",
-    appId: "1:357452801766:web:cc93fad597bd0a584bbd27"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth();
-  const database = getDatabase(app);
-
-  submitData.addEventListener('click', (e) => {
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-
-    signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        const user =userCredential.user
-        var lgDate = new Date();
-        update(ref(database, 'users/' + user.uid), {
-                last_login: lgDate,
-            })
-            .then(() => {
-                console.log('user logged in successfully');
-                window.location.assign('../logged/logged.html');
-            })
-            .catch((error) => {
-                alert(error);
-            });
-    }).catch((error) => {
-        if(email || password == "") {
-          alert("Introduzca email y contraseña");
-        }
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorMessage);
-    });
-
-  });
-</script>
